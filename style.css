@@ -8,6 +8,16 @@
 
 body {
   background: #f0f0f026;
+  display: grid;
+  min-height: 100vh;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 970px;
+  padding: 0 35px;
+  margin: auto;
 }
 
 .h1--yellow {
@@ -47,13 +57,8 @@ button:not(:last-child) {
   height: 64px;
 }
 
-/* .text {
-  margin-bottom: 7px;
-} */
-
 .value {
   font-weight: 700;
-  /* margin-top: 10px; */
 }
 
 .calculator-content-title {
@@ -63,10 +68,27 @@ button:not(:last-child) {
   margin-bottom: 40px;
 }
 
+@media (max-width: 1000px) {
+  .calculator-content-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .calculator-content-body-left {
   padding-right: 30px;
   border-right: 1px solid #00000012;
   width: 74%;
+}
+
+@media (max-width: 1000px) {
+  .calculator-content-body-left {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #00000012;
+    width: auto;
+  }
 }
 
 .calculator-content-body-right {
@@ -77,11 +99,19 @@ button:not(:last-child) {
   justify-content: space-between;
 }
 
-.flex-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+@media (max-width: 1000px) {
+  .calculator-content-body-right {
+    padding-top: 30px;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .final-results-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .calculator-content-body {
@@ -90,8 +120,13 @@ button:not(:last-child) {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  width: 900px;
   box-shadow: 0 0 30px #dbdbdbab;
+}
+
+@media (max-width: 1000px) {
+  .calculator-content-body {
+    flex-direction: column;
+  }
 }
 
 .calculator-content-body-left-btns {
@@ -101,6 +136,12 @@ button:not(:last-child) {
 
 .final-result-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .final-result-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .final-result-item .value {
@@ -227,7 +268,8 @@ input::-moz-range-thumb {
 
 .text-alert-totalcost {
   position: absolute;
-  top: 23.8%;
+  top: 5%;
+
   left: 31.4%;
   transform: translateY(20px);
   padding: 8px;
@@ -249,9 +291,21 @@ input::-moz-range-thumb {
   -webkit-transition: 0.4s ease;
 }
 
+.total-cost {
+  position: relative;
+}
+
+.an-initial-fee {
+  position: relative;
+}
+
+.credit-term {
+  position: relative;
+}
+
 .text-alert-aninitialfee {
   position: absolute;
-  top: 39.3%;
+  top: 5%;
   left: 27.8%;
   transform: translateY(20px);
   padding: 8px;
@@ -275,7 +329,8 @@ input::-moz-range-thumb {
 
 .text-alert-creditterm {
   position: absolute;
-  top: 54.7%;
+  top: 5%;
+
   left: 31%;
   transform: translateY(20px);
   padding: 8px;
