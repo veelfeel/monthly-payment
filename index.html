@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
@@ -9,125 +10,131 @@
   </head>
   <body>
     <div class="flex-wrapper">
-      <div class="calculator-content">
-        <div class="calculator-content-title">
-          <h1>Рассчитайте ипотеку</h1>
-          <h1 class="h1--yellow">Получите одобрение прямо сейчас</h1>
-        </div>
-        <div class="calculator-content-body">
-          <div class="calculator-content-body-left">
-            <div class="calculator-content-body-left-inputs">
-              <div class="input-wrapper">
-                <div class="input-text">
-                  <div class="title">Стоимость недвижимости</div>
-                  <div class="title-sum">до 10 млн. ₽</div>
-                </div>
-                <div class="input">
-                  <input type="number" id="total-cost" value="0" />
-                </div>
-                <div class="input">
-                  <input
-                    type="range"
-                    min="1000000"
-                    max="10000000"
-                    id="total-cost-range"
-                    value="0"
-                    class="input-range"
-                  />
-                </div>
-              </div>
-              <div class="text-alert-totalcost">
-                Минимальная сумма кредита <strong>1 000 000 ₽</strong>
-              </div>
-              <div class="input-wrapper">
-                <div class="input-text">
-                  <div class="title">Первоначальный взнос</div>
-                  <div class="title-sum">от 10.0%</div>
-                </div>
-                <div class="input">
-                  <input
-                    type="number"
-                    min="10"
-                    max="100"
-                    id="an-initial-fee"
-                    value="0"
-                  />
-                </div>
-                <div class="input">
-                  <input
-                    type="range"
-                    min="100000"
-                    max="10000000"
-                    id="an-initial-fee-range"
-                    value="0"
-                    class="input-range"
-                  />
-                </div>
-              </div>
-              <div class="text-alert-aninitialfee">
-                Минимальная сумма первоначального взноса <strong>10%</strong>
-              </div>
-              <div class="input-wrapper">
-                <div class="input-text">
-                  <div class="title">Срок кредита</div>
-                  <div class="title-sum">до 20 лет</div>
-                </div>
-                <div class="input">
-                  <input type="number" id="credit-term" value="0" />
-                </div>
-                <div class="input">
-                  <input
-                    type="range"
-                    min="1"
-                    max="20"
-                    id="credit-term-range"
-                    value="0"
-                    class="input-range"
-                  />
-                </div>
-              </div>
-              <div class="text-alert-creditterm">
-                Максимальный срок кредита <strong>20 лет</strong>
-              </div>
-            </div>
-            <div class="calculator-content-title-bank">
-              <h2>Выбрать банк</h2>
-            </div>
-            <div class="calculator-content-body-left-btns">
-              <button data-name="alfa" class="bank">
-                <div class="text">Альфа-банк</div>
-                <div class="value">8.7%</div>
-              </button>
-              <button data-name="sberbank" class="bank">
-                <div class="text">Сбербанк</div>
-                <div class="value">8.4%</div>
-              </button>
-              <button data-name="pochta" class="bank">
-                <div class="text">Почта-банк</div>
-                <div class="value">7.9%</div>
-              </button>
-              <button data-name="tinkoff" class="bank">
-                <div class="text">Тинькофф-банк</div>
-                <div class="value">9.2%</div>
-              </button>
-            </div>
+      <div class="container">
+        <div class="calculator-content">
+          <div class="calculator-content-title">
+            <h1>Рассчитайте ипотеку</h1>
+            <h1 class="h1--yellow">Получите одобрение прямо сейчас</h1>
           </div>
-          <div class="calculator-content-body-right">
-            <div class="final-results-wrapper">
-              <div class="final-result-item">
-                <div class="final-result-title">Сумма кредита</div>
-                <div class="value" id="amount-of-credit">0<span>₽</span></div>
+          <div class="calculator-content-body">
+            <div class="calculator-content-body-left">
+              <div class="calculator-content-body-left-inputs">
+                <div class="input-wrapper">
+                  <div class="input-text">
+                    <div class="title">Стоимость недвижимости</div>
+                    <div class="title-sum">до 10 млн. ₽</div>
+                  </div>
+                  <div class="input total-cost">
+                    <input type="number" id="total-cost" value="0" />
+                    <div class="text-alert-totalcost">
+                      Минимальная сумма кредита <strong>1 000 000 ₽</strong>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <input
+                      type="range"
+                      min="1000000"
+                      max="10000000"
+                      id="total-cost-range"
+                      value="0"
+                      class="input-range"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-wrapper">
+                  <div class="input-text">
+                    <div class="title">Первоначальный взнос</div>
+                    <div class="title-sum">от 10.0%</div>
+                  </div>
+                  <div class="input an-initial-fee">
+                    <input
+                      type="number"
+                      min="10"
+                      max="100"
+                      id="an-initial-fee"
+                      value="0"
+                    />
+                    <div class="text-alert-aninitialfee">
+                      Минимальная сумма первоначального взноса
+                      <strong>10%</strong>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <input
+                      type="range"
+                      min="100000"
+                      max="10000000"
+                      id="an-initial-fee-range"
+                      value="0"
+                      class="input-range"
+                    />
+                  </div>
+                </div>
+                <div class="input-wrapper">
+                  <div class="input-text">
+                    <div class="title">Срок кредита</div>
+                    <div class="title-sum">до 20 лет</div>
+                  </div>
+                  <div class="input credit-term">
+                    <input type="number" id="credit-term" value="0" />
+                    <div class="text-alert-creditterm">
+                      Максимальный срок кредита <strong>20 лет</strong>
+                    </div>
+                  </div>
+                  <div class="input">
+                    <input
+                      type="range"
+                      min="1"
+                      max="20"
+                      id="credit-term-range"
+                      value="0"
+                      class="input-range"
+                    />
+                  </div>
+                </div>
               </div>
-              <div class="final-result-item">
-                <div class="final-result-title">Ежемесячный платеж</div>
-                <div class="value" id="monthly-payment">0<span>₽</span></div>
+              <div class="calculator-content-title-bank">
+                <h2>Выбрать банк</h2>
               </div>
-              <div class="final-result-item">
-                <div class="final-result-title">Рекомендуемый доход</div>
-                <div class="value" id="recommended-income">0<span>₽</span></div>
+              <div class="calculator-content-body-left-btns">
+                <button data-name="alfa" class="bank">
+                  <div class="text">Альфа-банк</div>
+                  <div class="value">8.7%</div>
+                </button>
+                <button data-name="sberbank" class="bank">
+                  <div class="text">Сбербанк</div>
+                  <div class="value">8.4%</div>
+                </button>
+                <button data-name="pochta" class="bank">
+                  <div class="text">Почта-банк</div>
+                  <div class="value">7.9%</div>
+                </button>
+                <button data-name="tinkoff" class="bank">
+                  <div class="text">Тинькофф-банк</div>
+                  <div class="value">9.2%</div>
+                </button>
               </div>
             </div>
-            <button class="calculator-button">Получить одобрение</button>
+            <div class="calculator-content-body-right">
+              <div class="final-results-wrapper">
+                <div class="final-result-item">
+                  <div class="final-result-title">Сумма кредита</div>
+                  <div class="value" id="amount-of-credit">0<span>₽</span></div>
+                </div>
+                <div class="final-result-item">
+                  <div class="final-result-title">Ежемесячный платеж</div>
+                  <div class="value" id="monthly-payment">0<span>₽</span></div>
+                </div>
+                <div class="final-result-item">
+                  <div class="final-result-title">Рекомендуемый доход</div>
+                  <div class="value" id="recommended-income">
+                    0<span>₽</span>
+                  </div>
+                </div>
+              </div>
+              <button class="calculator-button">Получить одобрение</button>
+            </div>
           </div>
         </div>
       </div>
