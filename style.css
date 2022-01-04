@@ -273,8 +273,6 @@ input {
   -webkit-appearance: none;
   width: 100%;
   height: 10px;
-  /* background: #fff46140; */
-  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   border-radius: 5px;
   outline: none;
@@ -288,9 +286,6 @@ input::-webkit-slider-thumb {
   height: 18px;
   border-radius: 50%;
   background: #fff;
-  /* background: #84dd8f; */
-  /* border: 4px solid #fff461; */
-  /* border: 4px solid #84dd8f; */
   border: 4px solid #fff;
   box-shadow: 0 1px 4px rgb(36 38 41 / 24%);
   cursor: pointer;
@@ -308,11 +303,10 @@ input::-moz-range-thumb {
 }
 
 .text-alert-totalcost {
+  z-index: 11111;
   position: absolute;
   top: 5%;
-
-  left: 31.4%;
-  transform: translateY(20px);
+  transform: translateY(40px);
   padding: 8px;
   background: white;
   border: 1px solid #e3e3e3;
@@ -325,7 +319,7 @@ input::-moz-range-thumb {
 }
 
 .text-alert-totalcost.active {
-  transform: translateY(0);
+  transform: translateY(50px);
   visibility: visible;
   opacity: 1;
   transition: 0.4s ease;
@@ -345,10 +339,10 @@ input::-moz-range-thumb {
 }
 
 .text-alert-aninitialfee {
+  z-index: 11111;
   position: absolute;
   top: 5%;
-  left: 27.8%;
-  transform: translateY(20px);
+  transform: translateY(40px);
   padding: 8px;
   background: white;
   border: 1px solid #e3e3e3;
@@ -361,7 +355,7 @@ input::-moz-range-thumb {
 }
 
 .text-alert-aninitialfee.active {
-  transform: translateY(0);
+  transform: translateY(50px);
   visibility: visible;
   opacity: 1;
   transition: 0.4s ease;
@@ -369,11 +363,10 @@ input::-moz-range-thumb {
 }
 
 .text-alert-creditterm {
+  z-index: 11111;
   position: absolute;
   top: 5%;
-
-  left: 31%;
-  transform: translateY(20px);
+  transform: translateY(40px);
   padding: 8px;
   background: white;
   border: 1px solid #e3e3e3;
@@ -386,7 +379,7 @@ input::-moz-range-thumb {
 }
 
 .text-alert-creditterm.active {
-  transform: translateY(0);
+  transform: translateY(50px);
   visibility: visible;
   opacity: 1;
   transition: 0.4s ease;
